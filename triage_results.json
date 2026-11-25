@@ -1,0 +1,178 @@
+[
+  {
+    "request_id": "REQ-001",
+    "received": "2026-11-13 08:45",
+    "sender": "Project team",
+    "message": "Can someone tell me what is late this week?",
+    "first_pass": "Project status request / Normal",
+    "category": "Project status request",
+    "urgency": "Normal",
+    "issue": "Can someone tell me what is late this week?",
+    "related_projects": [],
+    "related_tasks": [],
+    "link_status": "none",
+    "recommended_next_action": "Share the read-only overdue/at-risk summary with the requester (no data change).",
+    "escalate_to": [
+      "Ops Manager (to be confirmed)"
+    ],
+    "blocked_actions": [],
+    "requires_human_review": false,
+    "review_flags": [],
+    "notes": [],
+    "sheet_label": "Project status request / Normal"
+  },
+  {
+    "request_id": "REQ-002",
+    "received": "2026-11-13 09:05",
+    "sender": "Mia Santos",
+    "message": "I need approved product facts before I can finish the copy.",
+    "first_pass": "Dependency / blocker / High",
+    "category": "Dependency / blocker",
+    "urgency": "High",
+    "issue": "I need approved product facts before I can finish the copy.",
+    "related_projects": [
+      "PRJ-101",
+      "PRJ-103"
+    ],
+    "related_tasks": [
+      "T-002",
+      "T-010"
+    ],
+    "link_status": "ambiguous",
+    "recommended_next_action": "Once the project is confirmed, route to its lead to identify who holds the approved facts. Do not draft product claims.",
+    "escalate_to": [
+      "Undecided until project is confirmed: PRJ-101 lead Mia Santos / PRJ-103 lead Lara Reyes"
+    ],
+    "blocked_actions": [
+      "product claims: Do not invent product facts. Use only facts on the approved list; ask the owner."
+    ],
+    "requires_human_review": true,
+    "review_flags": [
+      "AMBIGUOUS_LINK",
+      "LEAD_IS_REQUESTER"
+    ],
+    "notes": [
+      "Could relate to T-002, T-010 in PRJ-101, PRJ-103; a person must choose.",
+      "Mia Santos is both requester and lead of a candidate project, so routing to the lead is circular; who holds the approved facts is not in the data. Confirm."
+    ],
+    "sheet_label": "Dependency / blocker / High"
+  },
+  {
+    "request_id": "REQ-003",
+    "received": "2026-11-13 09:40",
+    "sender": "Ethan Cruz",
+    "message": "The export changed its column names and my automation is failing.",
+    "first_pass": "Automation error / High",
+    "category": "Automation error",
+    "urgency": "High",
+    "issue": "The export changed its column names and my automation is failing.",
+    "related_projects": [
+      "PRJ-102"
+    ],
+    "related_tasks": [
+      "T-005",
+      "T-006"
+    ],
+    "link_status": "ambiguous",
+    "recommended_next_action": "Ethan Cruz (owner of the linked tasks) investigates the field mapping on a copy; log result against the linked task. Do not overwrite source data.",
+    "escalate_to": [
+      "Ops Manager (to be confirmed)"
+    ],
+    "blocked_actions": [
+      "source data change: Do not overwrite source data. Work on a copy and log the mapping."
+    ],
+    "requires_human_review": true,
+    "review_flags": [],
+    "notes": [
+      "Project PRJ-102 is clear; task could be T-005, T-006."
+    ],
+    "sheet_label": "Automation error / High"
+  },
+  {
+    "request_id": "REQ-004",
+    "received": "2026-11-13 10:20",
+    "sender": "Lara Reyes",
+    "message": "Packaging is not approved yet. Please don't move launch tasks to complete.",
+    "first_pass": "Approval / compliance gate / High",
+    "category": "Approval / compliance gate",
+    "urgency": "Critical",
+    "issue": "Packaging is not approved yet. Please don't move launch tasks to complete.",
+    "related_projects": [
+      "PRJ-103"
+    ],
+    "related_tasks": [
+      "T-008"
+    ],
+    "link_status": "likely",
+    "recommended_next_action": "Keep T-008 and dependents open until explicit written approval is recorded.",
+    "escalate_to": [
+      "Ops Manager (to be confirmed)"
+    ],
+    "blocked_actions": [
+      "status change / approval: Do not change status or approve. Approval must be explicit, written and recorded."
+    ],
+    "requires_human_review": true,
+    "review_flags": [],
+    "notes": [
+      "Urgency changed High -> Critical: linked task is Critical priority."
+    ],
+    "sheet_label": "Approval / compliance gate / Critical"
+  },
+  {
+    "request_id": "REQ-005",
+    "received": "2026-11-13 11:00",
+    "sender": "Jordan Lee",
+    "message": "Can the AI agent just email everyone with overdue tasks automatically?",
+    "first_pass": "Automation request / Medium",
+    "category": "Automation request",
+    "urgency": "Medium",
+    "issue": "Can the AI agent just email everyone with overdue tasks automatically?",
+    "related_projects": [],
+    "related_tasks": [],
+    "link_status": "none",
+    "recommended_next_action": "Do not auto-send. Proposal: agent drafts per-owner digest, project lead reviews, named human approves, then send.",
+    "escalate_to": [
+      "Ops Manager (to be confirmed)"
+    ],
+    "blocked_actions": [
+      "outbound message: Do not send. Draft for human review; sending needs named approver."
+    ],
+    "requires_human_review": true,
+    "review_flags": [],
+    "notes": [],
+    "sheet_label": "Automation request / Medium"
+  },
+  {
+    "request_id": "REQ-006",
+    "received": "2026-11-13 12:30",
+    "sender": "Ava Garcia",
+    "message": "The triage bot marked a routine billing question as urgent.",
+    "first_pass": "Billing / finance question / Urgent",
+    "category": "AI quality issue",
+    "urgency": "High",
+    "issue": "The triage bot marked a routine billing question as urgent.",
+    "related_projects": [
+      "PRJ-105"
+    ],
+    "related_tasks": [
+      "T-016"
+    ],
+    "link_status": "likely",
+    "recommended_next_action": "Log as an AI error with the input and wrong output; add to the review sample; human review before any live use.",
+    "escalate_to": [
+      "Ops Manager (to be confirmed)"
+    ],
+    "blocked_actions": [],
+    "requires_human_review": true,
+    "review_flags": [
+      "FIRST_PASS_OVERRIDDEN",
+      "CONTRADICTION"
+    ],
+    "notes": [
+      "First pass said 'Billing / finance question'/Urgent, but the message describes the triage system's own mistake. Re-classified.",
+      "Message calls the item routine but first pass set Urgent; urgency not trusted.",
+      "Urgency changed Urgent -> High: first-pass urgency came from the keyword, not from the category rules."
+    ],
+    "sheet_label": "AI quality issue / High"
+  }
+]

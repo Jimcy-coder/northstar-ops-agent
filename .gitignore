@@ -1,0 +1,9 @@
+# never commit secrets or local files
+.env
+*.key
+__pycache__/
+# local session files from the live demo
+outputs/approval_queue.jsonl
+outputs/llm_session_log.jsonl
+# the assessment workbook is the company's file: keep it out of GitHub (it stays in the Drive copy)
+data/

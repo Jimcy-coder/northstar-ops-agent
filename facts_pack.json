@@ -1,0 +1,847 @@
+{
+  "reference_date": "2026-11-13",
+  "projects": {
+    "PRJ-101": {
+      "name": "Product Listing Refresh",
+      "lead": "Mia Santos",
+      "priority": "High",
+      "reported": "In Progress",
+      "target": "2026-11-20 00:00:00",
+      "fmax": "2026-11-19 00:00:00",
+      "margin": "1",
+      "rag": "AMBER",
+      "why": "['blocked/overdue: T-003', 'thin margin: 1 day(s) between latest forecast and target']",
+      "mismatch": "False",
+      "done": "1",
+      "total": "4",
+      "risk": "Final image approval depends on copy direction."
+    },
+    "PRJ-102": {
+      "name": "Monthly Reporting Automation",
+      "lead": "Ethan Cruz",
+      "priority": "High",
+      "reported": "At Risk",
+      "target": "2026-11-17 00:00:00",
+      "fmax": "2026-11-19 00:00:00",
+      "margin": "-2",
+      "rag": "RED",
+      "why": "['latest forecast Thu 19 Nov is 2 day(s) after target Tue 17 Nov']",
+      "mismatch": "False",
+      "done": "0",
+      "total": "3",
+      "risk": "Source data column names changed."
+    },
+    "PRJ-103": {
+      "name": "New Product Launch",
+      "lead": "Lara Reyes",
+      "priority": "Critical",
+      "reported": "In Progress",
+      "target": "2026-11-27 00:00:00",
+      "fmax": "2026-11-26 00:00:00",
+      "margin": "1",
+      "rag": "RED",
+      "why": "['Critical-priority task blocked/overdue: T-008', 'thin margin: 1 day(s) between latest forecast and target']",
+      "mismatch": "True",
+      "done": "0",
+      "total": "5",
+      "risk": "Packaging approval is blocking downstream work."
+    },
+    "PRJ-104": {
+      "name": "Team SOP Cleanup",
+      "lead": "Noah Lim",
+      "priority": "Medium",
+      "reported": "Not Started",
+      "target": "2026-11-24 00:00:00",
+      "fmax": "2026-11-20 00:00:00",
+      "margin": "4",
+      "rag": "AMBER",
+      "why": "['blocked/overdue: T-013']",
+      "mismatch": "False",
+      "done": "0",
+      "total": "2",
+      "risk": "Owner has not confirmed start date."
+    },
+    "PRJ-105": {
+      "name": "AI Support Inbox Triage",
+      "lead": "Ava Garcia",
+      "priority": "Medium",
+      "reported": "In Progress",
+      "target": "2026-11-19 00:00:00",
+      "fmax": "2026-11-19 00:00:00",
+      "margin": "0",
+      "rag": "AMBER",
+      "why": "['tasks forecast after their due dates', 'thin margin: 0 day(s) between latest forecast and target']",
+      "mismatch": "False",
+      "done": "1",
+      "total": "4",
+      "risk": "Human-review queue is not yet built."
+    }
+  },
+  "tasks": {
+    "T-001": {
+      "Task ID": "T-001",
+      "Project ID": "PRJ-101",
+      "Task": "Collect competitor examples",
+      "Owner": "Mia Santos",
+      "Status": "Done",
+      "Due Date": "2026-11-10 00:00:00",
+      "Forecast Completion": "2026-11-10 00:00:00",
+      "Priority": "High",
+      "Depends On": "nan",
+      "Latest Update": "Reference folder prepared.",
+      "row": 2,
+      "deps": [],
+      "down": [
+        "T-002",
+        "T-003",
+        "T-004"
+      ],
+      "open": false,
+      "overdue": false,
+      "due_today": false,
+      "blocked": false,
+      "slip": 0,
+      "at_risk": false,
+      "risk_note": false,
+      "tier": null,
+      "level": "",
+      "waiting_on": []
+    },
+    "T-002": {
+      "Task ID": "T-002",
+      "Project ID": "PRJ-101",
+      "Task": "Draft revised listing copy",
+      "Owner": "Mia Santos",
+      "Status": "In Progress",
+      "Due Date": "2026-11-13 00:00:00",
+      "Forecast Completion": "2026-11-16 00:00:00",
+      "Priority": "High",
+      "Depends On": "T-001",
+      "Latest Update": "Draft 70% complete; awaiting product fact confirmation.",
+      "row": 3,
+      "deps": [
+        "T-001"
+      ],
+      "down": [
+        "T-003",
+        "T-004"
+      ],
+      "open": true,
+      "overdue": false,
+      "due_today": true,
+      "blocked": false,
+      "slip": 3,
+      "at_risk": true,
+      "risk_note": false,
+      "tier": "P2",
+      "level": "critical",
+      "waiting_on": []
+    },
+    "T-003": {
+      "Task ID": "T-003",
+      "Project ID": "PRJ-101",
+      "Task": "Approve image sequence",
+      "Owner": "Jordan Lee",
+      "Status": "Blocked",
+      "Due Date": "2026-11-14 00:00:00",
+      "Forecast Completion": "2026-11-18 00:00:00",
+      "Priority": "High",
+      "Depends On": "T-002",
+      "Latest Update": "Waiting for copy direction.",
+      "row": 4,
+      "deps": [
+        "T-002"
+      ],
+      "down": [
+        "T-004"
+      ],
+      "open": true,
+      "overdue": false,
+      "due_today": false,
+      "blocked": true,
+      "slip": 4,
+      "at_risk": true,
+      "risk_note": false,
+      "tier": "P2",
+      "level": "watch",
+      "waiting_on": []
+    },
+    "T-004": {
+      "Task ID": "T-004",
+      "Project ID": "PRJ-101",
+      "Task": "Prepare upload checklist",
+      "Owner": "Mia Santos",
+      "Status": "Not Started",
+      "Due Date": "2026-11-18 00:00:00",
+      "Forecast Completion": "2026-11-19 00:00:00",
+      "Priority": "Medium",
+      "Depends On": "T-003",
+      "Latest Update": "Cannot finalize until image sequence approved.",
+      "row": 5,
+      "deps": [
+        "T-003"
+      ],
+      "down": [],
+      "open": true,
+      "overdue": false,
+      "due_today": false,
+      "blocked": false,
+      "slip": 1,
+      "at_risk": true,
+      "risk_note": false,
+      "tier": "P3",
+      "level": "",
+      "waiting_on": [
+        "T-003"
+      ]
+    },
+    "T-005": {
+      "Task ID": "T-005",
+      "Project ID": "PRJ-102",
+      "Task": "Confirm source report columns",
+      "Owner": "Ethan Cruz",
+      "Status": "Overdue",
+      "Due Date": "2026-11-11 00:00:00",
+      "Forecast Completion": "2026-11-14 00:00:00",
+      "Priority": "High",
+      "Depends On": "nan",
+      "Latest Update": "Export changed 'Sales' to 'Ordered Revenue'.",
+      "row": 6,
+      "deps": [],
+      "down": [
+        "T-006",
+        "T-007"
+      ],
+      "open": true,
+      "overdue": true,
+      "due_today": false,
+      "blocked": false,
+      "slip": 3,
+      "at_risk": true,
+      "risk_note": false,
+      "tier": "P1",
+      "level": "critical",
+      "waiting_on": []
+    },
+    "T-006": {
+      "Task ID": "T-006",
+      "Project ID": "PRJ-102",
+      "Task": "Build data-cleaning workflow",
+      "Owner": "Ethan Cruz",
+      "Status": "In Progress",
+      "Due Date": "2026-11-14 00:00:00",
+      "Forecast Completion": "2026-11-18 00:00:00",
+      "Priority": "High",
+      "Depends On": "T-005",
+      "Latest Update": "Workflow still expects old column names.",
+      "row": 7,
+      "deps": [
+        "T-005"
+      ],
+      "down": [
+        "T-007"
+      ],
+      "open": true,
+      "overdue": false,
+      "due_today": false,
+      "blocked": false,
+      "slip": 4,
+      "at_risk": true,
+      "risk_note": false,
+      "tier": "P2",
+      "level": "",
+      "waiting_on": [
+        "T-005"
+      ]
+    },
+    "T-007": {
+      "Task ID": "T-007",
+      "Project ID": "PRJ-102",
+      "Task": "Test weekly summary",
+      "Owner": "Priya Shah",
+      "Status": "Not Started",
+      "Due Date": "2026-11-18 00:00:00",
+      "Forecast Completion": "2026-11-19 00:00:00",
+      "Priority": "Medium",
+      "Depends On": "T-006",
+      "Latest Update": "Needs cleaned sample data.",
+      "row": 8,
+      "deps": [
+        "T-006"
+      ],
+      "down": [],
+      "open": true,
+      "overdue": false,
+      "due_today": false,
+      "blocked": false,
+      "slip": 1,
+      "at_risk": true,
+      "risk_note": false,
+      "tier": "P3",
+      "level": "",
+      "waiting_on": [
+        "T-005"
+      ]
+    },
+    "T-008": {
+      "Task ID": "T-008",
+      "Project ID": "PRJ-103",
+      "Task": "Approve packaging artwork",
+      "Owner": "Lara Reyes",
+      "Status": "Blocked",
+      "Due Date": "2026-11-12 00:00:00",
+      "Forecast Completion": "2026-11-17 00:00:00",
+      "Priority": "Critical",
+      "Depends On": "nan",
+      "Latest Update": "Awaiting written approval after one correction.",
+      "row": 9,
+      "deps": [],
+      "down": [
+        "T-009",
+        "T-010",
+        "T-011",
+        "T-012"
+      ],
+      "open": true,
+      "overdue": true,
+      "due_today": false,
+      "blocked": true,
+      "slip": 5,
+      "at_risk": true,
+      "risk_note": false,
+      "tier": "P1",
+      "level": "critical",
+      "waiting_on": []
+    },
+    "T-009": {
+      "Task ID": "T-009",
+      "Project ID": "PRJ-103",
+      "Task": "Confirm production completion date",
+      "Owner": "Lara Reyes",
+      "Status": "In Progress",
+      "Due Date": "2026-11-14 00:00:00",
+      "Forecast Completion": "2026-11-16 00:00:00",
+      "Priority": "High",
+      "Depends On": "T-008",
+      "Latest Update": "Supplier says schedule may shift by 3\u20135 days.",
+      "row": 10,
+      "deps": [
+        "T-008"
+      ],
+      "down": [
+        "T-011",
+        "T-012"
+      ],
+      "open": true,
+      "overdue": false,
+      "due_today": false,
+      "blocked": false,
+      "slip": 2,
+      "at_risk": true,
+      "risk_note": true,
+      "tier": "P2",
+      "level": "critical",
+      "waiting_on": [
+        "T-008"
+      ]
+    },
+    "T-010": {
+      "Task ID": "T-010",
+      "Project ID": "PRJ-103",
+      "Task": "Prepare listing content",
+      "Owner": "Mia Santos",
+      "Status": "Not Started",
+      "Due Date": "2026-11-18 00:00:00",
+      "Forecast Completion": "2026-11-21 00:00:00",
+      "Priority": "High",
+      "Depends On": "T-008",
+      "Latest Update": "Use approved product facts only.",
+      "row": 11,
+      "deps": [
+        "T-008"
+      ],
+      "down": [
+        "T-012"
+      ],
+      "open": true,
+      "overdue": false,
+      "due_today": false,
+      "blocked": false,
+      "slip": 3,
+      "at_risk": true,
+      "risk_note": false,
+      "tier": "P3",
+      "level": "",
+      "waiting_on": [
+        "T-008"
+      ]
+    },
+    "T-011": {
+      "Task ID": "T-011",
+      "Project ID": "PRJ-103",
+      "Task": "Prepare inbound shipment plan",
+      "Owner": "Noah Lim",
+      "Status": "Not Started",
+      "Due Date": "2026-11-20 00:00:00",
+      "Forecast Completion": "2026-11-24 00:00:00",
+      "Priority": "High",
+      "Depends On": "T-009",
+      "Latest Update": "Requires confirmed production date.",
+      "row": 12,
+      "deps": [
+        "T-009"
+      ],
+      "down": [
+        "T-012"
+      ],
+      "open": true,
+      "overdue": false,
+      "due_today": false,
+      "blocked": false,
+      "slip": 4,
+      "at_risk": true,
+      "risk_note": false,
+      "tier": "P3",
+      "level": "",
+      "waiting_on": [
+        "T-008"
+      ]
+    },
+    "T-012": {
+      "Task ID": "T-012",
+      "Project ID": "PRJ-103",
+      "Task": "Create launch campaign brief",
+      "Owner": "Ava Garcia",
+      "Status": "Not Started",
+      "Due Date": "2026-11-23 00:00:00",
+      "Forecast Completion": "2026-11-26 00:00:00",
+      "Priority": "Medium",
+      "Depends On": "T-010;T-011",
+      "Latest Update": "Requires content and inbound plan.",
+      "row": 13,
+      "deps": [
+        "T-010",
+        "T-011"
+      ],
+      "down": [],
+      "open": true,
+      "overdue": false,
+      "due_today": false,
+      "blocked": false,
+      "slip": 3,
+      "at_risk": true,
+      "risk_note": false,
+      "tier": "P3",
+      "level": "",
+      "waiting_on": [
+        "T-008"
+      ]
+    },
+    "T-013": {
+      "Task ID": "T-013",
+      "Project ID": "PRJ-104",
+      "Task": "Inventory existing SOPs",
+      "Owner": "Noah Lim",
+      "Status": "Not Started",
+      "Due Date": "2026-11-12 00:00:00",
+      "Forecast Completion": "2026-11-15 00:00:00",
+      "Priority": "Medium",
+      "Depends On": "nan",
+      "Latest Update": "No start update received.",
+      "row": 14,
+      "deps": [],
+      "down": [
+        "T-014"
+      ],
+      "open": true,
+      "overdue": true,
+      "due_today": false,
+      "blocked": false,
+      "slip": 3,
+      "at_risk": true,
+      "risk_note": false,
+      "tier": "P2",
+      "level": "watch",
+      "waiting_on": []
+    },
+    "T-014": {
+      "Task ID": "T-014",
+      "Project ID": "PRJ-104",
+      "Task": "Prioritize SOP updates",
+      "Owner": "Noah Lim",
+      "Status": "Not Started",
+      "Due Date": "2026-11-17 00:00:00",
+      "Forecast Completion": "2026-11-20 00:00:00",
+      "Priority": "Low",
+      "Depends On": "T-013",
+      "Latest Update": "Depends on inventory.",
+      "row": 15,
+      "deps": [
+        "T-013"
+      ],
+      "down": [],
+      "open": true,
+      "overdue": false,
+      "due_today": false,
+      "blocked": false,
+      "slip": 3,
+      "at_risk": true,
+      "risk_note": false,
+      "tier": "P3",
+      "level": "",
+      "waiting_on": [
+        "T-013"
+      ]
+    },
+    "T-015": {
+      "Task ID": "T-015",
+      "Project ID": "PRJ-105",
+      "Task": "Define request categories",
+      "Owner": "Ava Garcia",
+      "Status": "Done",
+      "Due Date": "2026-11-11 00:00:00",
+      "Forecast Completion": "2026-11-11 00:00:00",
+      "Priority": "Medium",
+      "Depends On": "nan",
+      "Latest Update": "Five categories drafted.",
+      "row": 16,
+      "deps": [],
+      "down": [
+        "T-016",
+        "T-017",
+        "T-018"
+      ],
+      "open": false,
+      "overdue": false,
+      "due_today": false,
+      "blocked": false,
+      "slip": 0,
+      "at_risk": false,
+      "risk_note": false,
+      "tier": null,
+      "level": "",
+      "waiting_on": []
+    },
+    "T-016": {
+      "Task ID": "T-016",
+      "Project ID": "PRJ-105",
+      "Task": "Build classification prototype",
+      "Owner": "Ava Garcia",
+      "Status": "In Progress",
+      "Due Date": "2026-11-13 00:00:00",
+      "Forecast Completion": "2026-11-17 00:00:00",
+      "Priority": "High",
+      "Depends On": "T-015",
+      "Latest Update": "Sometimes marks routine billing questions urgent.",
+      "row": 17,
+      "deps": [
+        "T-015"
+      ],
+      "down": [
+        "T-017",
+        "T-018"
+      ],
+      "open": true,
+      "overdue": false,
+      "due_today": true,
+      "blocked": false,
+      "slip": 4,
+      "at_risk": true,
+      "risk_note": false,
+      "tier": "P2",
+      "level": "critical",
+      "waiting_on": []
+    },
+    "T-017": {
+      "Task ID": "T-017",
+      "Project ID": "PRJ-105",
+      "Task": "Add human-review queue",
+      "Owner": "Ethan Cruz",
+      "Status": "Not Started",
+      "Due Date": "2026-11-17 00:00:00",
+      "Forecast Completion": "2026-11-18 00:00:00",
+      "Priority": "Critical",
+      "Depends On": "T-016",
+      "Latest Update": "Required before any live use.",
+      "row": 18,
+      "deps": [
+        "T-016"
+      ],
+      "down": [
+        "T-018"
+      ],
+      "open": true,
+      "overdue": false,
+      "due_today": false,
+      "blocked": false,
+      "slip": 1,
+      "at_risk": true,
+      "risk_note": false,
+      "tier": "P2",
+      "level": "",
+      "waiting_on": []
+    },
+    "T-018": {
+      "Task ID": "T-018",
+      "Project ID": "PRJ-105",
+      "Task": "Test and document errors",
+      "Owner": "Priya Shah",
+      "Status": "Not Started",
+      "Due Date": "2026-11-18 00:00:00",
+      "Forecast Completion": "2026-11-19 00:00:00",
+      "Priority": "High",
+      "Depends On": "T-017",
+      "Latest Update": "Review false positives and false negatives.",
+      "row": 19,
+      "deps": [
+        "T-017"
+      ],
+      "down": [],
+      "open": true,
+      "overdue": false,
+      "due_today": false,
+      "blocked": false,
+      "slip": 1,
+      "at_risk": true,
+      "risk_note": false,
+      "tier": "P3",
+      "level": "",
+      "waiting_on": []
+    }
+  },
+  "issues": [
+    {
+      "id": "T-002",
+      "kind": "WAITING_PARTY_UNKNOWN",
+      "detail": "T-002 is waiting on someone, but the data does not say who ('Draft 70% complete; awaiting product fact confirmation.')",
+      "src": "Tasks!row 3"
+    },
+    {
+      "id": "T-008",
+      "kind": "WAITING_PARTY_UNKNOWN",
+      "detail": "T-008 is waiting on someone, but the data does not say who ('Awaiting written approval after one correction.')",
+      "src": "Tasks!row 9"
+    },
+    {
+      "id": "T-009",
+      "kind": "FORECAST_CONFLICT",
+      "detail": "T-009 forecasts Mon 16 Nov but its predecessor T-008 forecasts Tue 17 Nov (later)",
+      "src": "Tasks!rows 10,9"
+    },
+    {
+      "id": "T-013",
+      "kind": "STATUS_LABEL_GAP",
+      "detail": "T-013 is past due but status says 'Not Started'; status field does not show lateness",
+      "src": "Tasks!row 14"
+    },
+    {
+      "id": "T-003,T-005,T-006,T-009,T-010,T-013",
+      "kind": "WEEKEND_DATES",
+      "detail": "Due/forecast falls on a Sat/Sun; working days not defined in the data (assumed calendar days)",
+      "src": "Tasks"
+    },
+    {
+      "id": "ALL",
+      "kind": "SYSTEMIC_SLIP",
+      "detail": "All 16 open tasks forecast later than their due date; due dates may be stale baselines. Confirm before treating every task as late",
+      "src": "Tasks"
+    },
+    {
+      "id": "Weekly_Metrics",
+      "kind": "NO_TREND",
+      "detail": "Only one week of metrics: velocity/trend cannot be computed",
+      "src": "Weekly_Metrics"
+    },
+    {
+      "id": "PRJ-103",
+      "kind": "PROJECT_LABEL_MISMATCH",
+      "detail": "Project status 'In Progress' vs derived RED: label may understate risk",
+      "src": "Projects!PRJ-103"
+    }
+  ],
+  "followups": [
+    {
+      "owner": "Lara Reyes",
+      "tier": "P1",
+      "tid": "T-008",
+      "pid": "PRJ-103",
+      "lead": "Lara Reyes",
+      "action": "Say exactly what unblocks it, who decides, and by when",
+      "why": "Blocked; 4 downstream task(s) wait on it",
+      "task": "Approve packaging artwork"
+    },
+    {
+      "owner": "Ethan Cruz",
+      "tier": "P1",
+      "tid": "T-005",
+      "pid": "PRJ-102",
+      "lead": "Ethan Cruz",
+      "action": "Give a revised due date and a recovery plan",
+      "why": "Past due Wed 11 Nov; forecast Sat 14 Nov",
+      "task": "Confirm source report columns"
+    },
+    {
+      "owner": "Mia Santos",
+      "tier": "P2",
+      "tid": "T-002",
+      "pid": "PRJ-101",
+      "lead": "Mia Santos",
+      "action": "Name who you are waiting on (the data does not say) and agree a date with them",
+      "why": "Draft 70% complete; awaiting product fact confirmation.",
+      "task": "Draft revised listing copy"
+    },
+    {
+      "owner": "Lara Reyes",
+      "tier": "P2",
+      "tid": "T-009",
+      "pid": "PRJ-103",
+      "lead": "Lara Reyes",
+      "action": "Confirm the new schedule after the supplier replies and update the forecast",
+      "why": "Supplier schedule may shift by 3\u20135 days.",
+      "task": "Confirm production completion date"
+    },
+    {
+      "owner": "Ava Garcia",
+      "tier": "P2",
+      "tid": "T-016",
+      "pid": "PRJ-105",
+      "lead": "Ava Garcia",
+      "action": "Confirm whether the due date or the forecast is correct and update the tracker",
+      "why": "Forecast Tue 17 Nov is 4 day(s) after due Fri 13 Nov",
+      "task": "Build classification prototype"
+    },
+    {
+      "owner": "Jordan Lee",
+      "tier": "P2",
+      "tid": "T-003",
+      "pid": "PRJ-101",
+      "lead": "Mia Santos",
+      "action": "Say exactly what unblocks it, who decides, and by when",
+      "why": "Blocked; 1 downstream task(s) wait on it",
+      "task": "Approve image sequence"
+    },
+    {
+      "owner": "Mia Santos",
+      "tier": "P2",
+      "tid": "T-003",
+      "pid": "PRJ-101",
+      "lead": "Mia Santos",
+      "action": "Unblock T-003: Jordan Lee reports 'I can review images after copy direction is approved.' (depends on your T-002)",
+      "why": "Jordan Lee is waiting on T-002",
+      "task": "Approve image sequence"
+    },
+    {
+      "owner": "Ethan Cruz",
+      "tier": "P2",
+      "tid": "T-006",
+      "pid": "PRJ-102",
+      "lead": "Ethan Cruz",
+      "action": "Give a revised date; this depends on T-005, which is blocked/overdue",
+      "why": "Due Sat 14 Nov but forecast Wed 18 Nov and upstream is stuck",
+      "task": "Build data-cleaning workflow"
+    },
+    {
+      "owner": "Noah Lim",
+      "tier": "P2",
+      "tid": "T-013",
+      "pid": "PRJ-104",
+      "lead": "Noah Lim",
+      "action": "Confirm a start date and propose a revised due date",
+      "why": "Past due Thu 12 Nov and not started; no revised date on file",
+      "task": "Inventory existing SOPs"
+    },
+    {
+      "owner": "Ethan Cruz",
+      "tier": "P2",
+      "tid": "T-017",
+      "pid": "PRJ-105",
+      "lead": "Ava Garcia",
+      "action": "Confirm whether the due date or the forecast is correct and update the tracker",
+      "why": "Forecast Wed 18 Nov is 1 day(s) after due Tue 17 Nov",
+      "task": "Add human-review queue"
+    },
+    {
+      "owner": "Ava Garcia",
+      "tier": "P2",
+      "tid": "T-017",
+      "pid": "PRJ-105",
+      "lead": "Ava Garcia",
+      "action": "Unblock T-017: Ethan Cruz reports 'I can start after seeing prototype output format.' (depends on your T-016)",
+      "why": "Ethan Cruz is waiting on T-016",
+      "task": "Add human-review queue"
+    },
+    {
+      "owner": "Mia Santos",
+      "tier": "P3",
+      "tid": "T-010",
+      "pid": "PRJ-103",
+      "lead": "Lara Reyes",
+      "action": "No chase needed now: waiting on T-008; re-check when that moves",
+      "why": "Impacted by root cause T-008",
+      "task": "Prepare listing content"
+    },
+    {
+      "owner": "Noah Lim",
+      "tier": "P3",
+      "tid": "T-011",
+      "pid": "PRJ-103",
+      "lead": "Lara Reyes",
+      "action": "No chase needed now: waiting on T-008; re-check when that moves",
+      "why": "Impacted by root cause T-008",
+      "task": "Prepare inbound shipment plan"
+    },
+    {
+      "owner": "Mia Santos",
+      "tier": "P3",
+      "tid": "T-004",
+      "pid": "PRJ-101",
+      "lead": "Mia Santos",
+      "action": "No chase needed now: waiting on T-003; re-check when that moves",
+      "why": "Impacted by root cause T-003",
+      "task": "Prepare upload checklist"
+    },
+    {
+      "owner": "Priya Shah",
+      "tier": "P3",
+      "tid": "T-007",
+      "pid": "PRJ-102",
+      "lead": "Ethan Cruz",
+      "action": "No chase needed now: waiting on T-005; re-check when that moves",
+      "why": "Impacted by root cause T-005",
+      "task": "Test weekly summary"
+    },
+    {
+      "owner": "Ava Garcia",
+      "tier": "P3",
+      "tid": "T-012",
+      "pid": "PRJ-103",
+      "lead": "Lara Reyes",
+      "action": "No chase needed now: waiting on T-008; re-check when that moves",
+      "why": "Impacted by root cause T-008",
+      "task": "Create launch campaign brief"
+    },
+    {
+      "owner": "Noah Lim",
+      "tier": "P3",
+      "tid": "T-014",
+      "pid": "PRJ-104",
+      "lead": "Noah Lim",
+      "action": "No chase needed now: waiting on T-013; re-check when that moves",
+      "why": "Impacted by root cause T-013",
+      "task": "Prioritize SOP updates"
+    },
+    {
+      "owner": "Priya Shah",
+      "tier": "P3",
+      "tid": "T-018",
+      "pid": "PRJ-105",
+      "lead": "Ava Garcia",
+      "action": "Confirm whether the due date or the forecast is correct and update the tracker",
+      "why": "Forecast Thu 19 Nov is 1 day(s) after due Wed 18 Nov",
+      "task": "Test and document errors"
+    }
+  ],
+  "assumptions": [
+    "ASSUMPTION (not confirmed): if T-009's supplier slip of 3-5 days is real and downstream tasks shift equally, the last forecast moves from Thu 26 Nov to Sun 29 Nov-Tue 01 Dec vs target Fri 27 Nov. The update's own note: 'Confirmation expected Monday.'."
+  ]
+}
